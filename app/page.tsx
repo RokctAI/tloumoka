@@ -1,9 +1,9 @@
-import SplitScreen from "@/components/SplitScreen";
+import HeroSplit from "@/components/HeroSplit";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <SplitScreen />
+      <HeroSplit />
 
       {/* Introduction Section */}
       <section className="py-20 bg-zinc-950 text-center px-4">

@@ -77,68 +77,68 @@ export default function EngineeringPage() {
                     <div className="absolute inset-0 bg-[linear-gradient(45deg,#0a0a0a_25%,transparent_25%,transparent_75%,#0a0a0a_75%,#0a0a0a),linear-gradient(45deg,#0a0a0a_25%,transparent_25%,transparent_75%,#0a0a0a_75%,#0a0a0a)] bg-[length:4px_4px] opacity-20 pointer-events-none" />
                 </div>
             </section>
-        </section>
 
-            {/* Services "Blueprint" Section */ }
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-zinc-950 relative">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[length:40px_40px] opacity-[0.05]" />
 
-        <div className="max-w-7xl mx-auto relative z-10">
-            <div className="mb-24">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Technical Capabilities</h2>
-                <div className="w-full h-px bg-zinc-800" />
-            </div>
+            {/* Services "Blueprint" Section */}
+            <section className="py-32 px-4 sm:px-6 lg:px-8 bg-zinc-950 relative">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[length:40px_40px] opacity-[0.05]" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {services.map((service, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ delay: index * 0.1, duration: 0.5 }}
-                        className="group border-l border-zinc-800 pl-8 hover:border-blue-500 transition-colors duration-500"
-                    >
-                        <span className="block text-4xl font-bold text-zinc-800 mb-6 font-mono group-hover:text-blue-500/50 transition-colors">{service.id}</span>
-                        <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors uppercase tracking-wide">{service.title}</h3>
-                        <p className="text-zinc-500 text-sm leading-relaxed mb-6">
-                            {service.description}
-                        </p>
-                        <div className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-500 group-hover:border-blue-500 group-hover:text-blue-500 transition-all">
-                            {service.icon}
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
-        </div>
-    </section>
+                <div className="max-w-7xl mx-auto relative z-10">
+                    <div className="mb-24">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Technical Capabilities</h2>
+                        <div className="w-full h-px bg-zinc-800" />
+                    </div>
 
-    {/* Image / Parallax Split Section (Adapted for Portrait) */ }
-    <section className="min-h-screen flex flex-col md:flex-row bg-zinc-900 overflow-hidden">
-        {/* Text Side */}
-        <div className="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 bg-zinc-950 z-10">
-            <div className="space-y-8">
-                <div className="inline-block px-4 py-1 border border-blue-500/50 text-blue-500 rounded-full text-xs font-mono uppercase tracking-widest">
-                    Case Study: Hydraulic Overhaul
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {services.map((service, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ delay: index * 0.1, duration: 0.5 }}
+                                className="group border-l border-zinc-800 pl-8 hover:border-blue-500 transition-colors duration-500"
+                            >
+                                <span className="block text-4xl font-bold text-zinc-800 mb-6 font-mono group-hover:text-blue-500/50 transition-colors">{service.id}</span>
+                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors uppercase tracking-wide">{service.title}</h3>
+                                <p className="text-zinc-500 text-sm leading-relaxed mb-6">
+                                    {service.description}
+                                </p>
+                                <div className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-500 group-hover:border-blue-500 group-hover:text-blue-500 transition-all">
+                                    {service.icon}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
-                <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tighter">
-                    Precision <br /> in Motion
-                </h2>
-                <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
-                    Our state-of-the-art workshops are equipped to handle the most demanding hydraulic repairs. From re-chroming to pressure testing, we ensure zero-defect delivery.
-                </p>
-                <a href="/contact" className="inline-flex items-center gap-3 text-white border-b border-blue-500 pb-1 hover:text-blue-500 transition-colors uppercase tracking-widest text-sm font-bold">
-                    Request Assessment <ArrowDown className="-rotate-90 w-4 h-4" />
-                </a>
-            </div>
-        </div>
+            </section>
 
-        {/* Image Side (Portrait Friendly) */}
-        <div className="relative w-full md:w-1/2 min-h-[60vh] md:min-h-screen">
-            <div className="absolute inset-0 bg-[url('/images/hydraulic-repair.webp')] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-1000 scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-zinc-950/80 md:to-zinc-950/20" />
-        </div>
-    </section>
+            {/* Image / Parallax Split Section (Adapted for Portrait) */}
+            <section className="min-h-screen flex flex-col md:flex-row bg-zinc-900 overflow-hidden">
+                {/* Text Side */}
+                <div className="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 bg-zinc-950 z-10">
+                    <div className="space-y-8">
+                        <div className="inline-block px-4 py-1 border border-blue-500/50 text-blue-500 rounded-full text-xs font-mono uppercase tracking-widest">
+                            Case Study: Hydraulic Overhaul
+                        </div>
+                        <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tighter">
+                            Precision <br /> in Motion
+                        </h2>
+                        <p className="text-zinc-400 text-lg leading-relaxed max-w-md">
+                            Our state-of-the-art workshops are equipped to handle the most demanding hydraulic repairs. From re-chroming to pressure testing, we ensure zero-defect delivery.
+                        </p>
+                        <a href="/contact" className="inline-flex items-center gap-3 text-white border-b border-blue-500 pb-1 hover:text-blue-500 transition-colors uppercase tracking-widest text-sm font-bold">
+                            Request Assessment <ArrowDown className="-rotate-90 w-4 h-4" />
+                        </a>
+                    </div>
+                </div>
+
+                {/* Image Side (Portrait Friendly) */}
+                <div className="relative w-full md:w-1/2 min-h-[60vh] md:min-h-screen">
+                    <div className="absolute inset-0 bg-[url('/images/hydraulic-repair.webp')] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-1000 scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-l from-transparent to-zinc-950/80 md:to-zinc-950/20" />
+                </div>
+            </section>
 
         </div >
     );

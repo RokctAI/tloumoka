@@ -4,6 +4,13 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { Oswald } from "next/font/google"; // Import Oswald font
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-950 text-zinc-100 min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable} antialiased bg-zinc-950 text-zinc-100 min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white`}
       >
         <Navbar />
         <main className="flex-grow">

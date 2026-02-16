@@ -15,27 +15,29 @@ export default function PpePage() {
     return (
         <div ref={containerRef} className="bg-zinc-950 min-h-screen selection:bg-orange-500 selection:text-white">
 
-            {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                {/* Parallax BG */}
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[url('/images/ppe-hero.webp')] bg-cover bg-center opacity-40" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/50 via-zinc-950/80 to-zinc-950" />
-                </div>
+            {/* Hero Section (Split for Portrait) */}
+            <section className="relative min-h-[90vh] flex flex-col md:flex-row pt-20">
 
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+                {/* Text Side */}
+                <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16 z-10 bg-zinc-950">
                     <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <h1 className="text-6xl md:text-9xl font-bold text-white mb-6 tracking-tighter uppercase">
-                            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">Collection</span>
+                        <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tighter uppercase leading-none">
+                            The <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">Collection</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto font-light tracking-wide">
+                        <p className="text-xl md:text-2xl text-zinc-400 max-w-md font-light tracking-wide border-l-4 border-orange-500 pl-6">
                             Engineering safety meets tailored precision.
                         </p>
                     </motion.div>
+                </div>
+
+                {/* Image Side */}
+                <div className="w-full md:w-1/2 relative min-h-[50vh] md:min-h-full">
+                    <div className="absolute inset-0 bg-[url('/images/ppe-hero.webp')] bg-cover bg-center grayscale-0 hover:grayscale transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-transparent to-transparent opacity-50" />
                 </div>
             </section>
 

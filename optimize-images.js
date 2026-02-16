@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const directoryPath = path.join(__dirname, 'public', 'images');
+console.log('Scanning directory:', directoryPath);
 
 fs.readdir(directoryPath, (err, files) => {
     if (err) {

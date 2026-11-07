@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "repo": "RokctAI/tloumoka",
+  "commit": "69620d765719bd0cfa760811ac1ae0ef76b18370",
+  "taken_at": "2026-11-07T16:43:58Z",
+  "dir": "shots/69620d765719bd0cfa760811ac1ae0ef76b18370",
+  "files": {
+    "desktop-light.webp": {
+      "width": 1200,
+      "height": 833,
+      "bytes": 46736,
+      "sha256": "8693300fd28ae64cbd98f35d45f97fe4d5c426b1476835f4867b78086214dbb8"
+    },
+    "desktop-dark.webp": {
+      "width": 1200,
+      "height": 833,
+      "bytes": 46736,
+      "sha256": "8693300fd28ae64cbd98f35d45f97fe4d5c426b1476835f4867b78086214dbb8"
+    },
+    "option-light.webp": {
+      "width": 800,
+      "height": 500,
+      "bytes": 26718,
+      "sha256": "96fcf4ade85f0904c091c0f88aa7ba3664c9dddbcc4e8ba8329f471a3bc64e97"
+    },
+    "option-dark.webp": {
+      "width": 800,
+      "height": 500,
+      "bytes": 26718,
+      "sha256": "96fcf4ade85f0904c091c0f88aa7ba3664c9dddbcc4e8ba8329f471a3bc64e97"
+    },
+    "phone-light.webp": {
+      "width": 560,
+      "height": 1149,
+      "bytes": 42102,
+      "sha256": "d7075bb782fa652283618851503e06a9f5fd7fe824b9a17f395e1c021b9ff828"
+    },
+    "phone-dark.webp": {
+      "width": 560,
+      "height": 1149,
+      "bytes": 42102,
+      "sha256": "d7075bb782fa652283618851503e06a9f5fd7fe824b9a17f395e1c021b9ff828"
+    }
+  }
+}
